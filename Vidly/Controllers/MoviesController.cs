@@ -10,9 +10,13 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+
+        
         // GET: Movies
         public ActionResult Random()
         {
+
+
 
             var movie = new Movie() { Name = "Shrek!" };
 
@@ -27,6 +31,11 @@ namespace Vidly.Controllers
             //return new EmptyResult();
 
             return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
+        }
+
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
         }
         public ActionResult Edit(int id)
         {
