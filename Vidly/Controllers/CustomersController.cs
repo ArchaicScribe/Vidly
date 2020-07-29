@@ -13,27 +13,21 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Random()
         {
-            var customer = new List<Customer> {
+            var customer = new Customer() { Name = "Gabe Newell" };
+           /* var customers = new List<Customer> {
 
             new Customer() { Name = "Alex Rauenzahn" },
             new Customer() { Name = "Gabe Newell" },
             new Customer() { Name = "Elon Musk"},
             new Customer() {Name = "Alan Turing"}
             };
+*/
 
-
-            var movie = new List<Movie>
-            {
-
-                new Movie() {Name = "Lord of the Rings" },
-                new Movie() {Name = "Inception" },
-                new Movie() {Name = "Emperor's New Groove" },
-                new Movie() {Name = "The Departed" }
-            };
+         
 
             var viewModel = new RandomCustomerViewModel()
             {
-                Customers = customer
+                Customer = customer
             };
             return View(viewModel);
         }

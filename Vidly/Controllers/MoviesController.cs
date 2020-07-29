@@ -17,13 +17,24 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
 
-            var movie = new Movie() { Name = "Shrek: Happily Ever After!" };
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "John Smith"},
-                new Customer {Name = "Jane Doe"}
-            };
 
+            var movie = new Movie() { Name = "Inception" };
+            /*var movies = new List<Movie>
+            {
+                new Movie() {Name = "Lord of the Rings" },
+                new Movie() {Name = "Inception" },
+                new Movie() {Name = "Emperor's New Groove" },
+                new Movie() {Name = "The Departed" }
+            };
+            */
+            
+            var customers = new List<Customer> {
+
+            new Customer() { Name = "Alex Rauenzahn" },
+            new Customer() { Name = "Gabe Newell" },
+            new Customer() { Name = "Elon Musk"},
+            new Customer() {Name = "Alan Turing"}
+            };
             var viewModel = new RandomMovieViewModel()
             {
                 Movie = movie,

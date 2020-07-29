@@ -3,28 +3,24 @@
     ViewBag.Title = "Random Customer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-@{
-    var className = Model.Customers.
-}
-
-<h2 class-"customersNames">@Model.Customers.Name</h2>
+<h2>@Model.Customer.Name</h2>
 
 
 @if (Model.Customers.Count == 0)
 {
-    <p>No one has rented this movie before.</p>
+    <p>Welcome, brand new customer</p>
 }
 else
 {
     <ul>
-        @foreach (var customer in Model.Customers)
+        <p>Welcome, returning customer</p>
+
+        @foreach (var customers in Model.Customer)
         {
-            <li>
-                @customer.Name
-            </li>
+            <li>@customer.Name</li>
         }
-    </ul>
-}
+        </ul>
+    }
+
+ }
 
